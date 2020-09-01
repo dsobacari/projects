@@ -1,0 +1,27 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #333;
+    
+}
+
+li a {
+    display: block; /*makes the link clickable allows width,padding margin, height*/
+    color: #f2f2f2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+li a:hover {
+    background-color: #ddd;
+    color: 333;
+}
+
+.active {
+    background-color: green;
+    color: white;
+  }
