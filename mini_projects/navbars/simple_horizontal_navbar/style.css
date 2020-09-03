@@ -17,7 +17,7 @@
     color: #333;
 }    
 
-.navbar a.active {
+.navbar .active {
     background-color:green;
     color: white;
 }
