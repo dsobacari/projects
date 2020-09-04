@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive Web Design Projects - Build a Survey Form</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <header>
+        <!-- a title with id="title" in H1 sized text.-->
+        <h1 id="title">Build a Survey Form</h1>
+        <!-- short explanation with id="description" in P sized text. -->
+        <p id="description">Thank you for taking the time to fill up this form</p>
+    </header>
+    <!-- a form with id="survey-form". -->
+    <form action="" target="_self" id="survey-form">
+
+        <fieldset>
+        <legend>Your Information: </legend>
+          
+            <!-- Inside the form element, required to enter my name in a field with id="name". -->
+            <!--For the name, email, and number input fields inside the form - corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".-->
+             <!--For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.-->
+            <label for="name" id="name-label">Name: </label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br/>
+          
+            <!--Inside the form element, required to enter an email in a field with id="email".-->
+            <label for="email" id="email-label">Email: </label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br/>
+          
+            <!--If entered numbers are outside the range of the number input, which are defined by the min and max attributes, return an HTML5 validation error. -->
+            <label for="number" id="number-label">Age:&nbsp;&nbsp;&nbsp;</label>
+            <input type="number" id="number" name="number" placeholder="Enter your age" min="18" max="120">
+        </fieldset>
+    
+        <fieldset>
+        <legend>What describes you the best? </legend>
+          <!--Inside the form element, an option from a dropdown that has a corresponding id="dropdown".-->
+            <select name="fdescribes" id="dropdown">
+                <option value= "none" selected disabled>Select an Option</option>
+                <option value="fstudent">Student</option>
+                <option value="fftjob">Full-time Job</option>
+                <option value="fftlearner">Full-time Learner</option>
+                <option value="fprefernot">Prefer Not to Say</option>
+                <option value="fother">Other</option>
+            </select>
+            
+        </fieldset>
+    
+        <fieldset>
+        <legend>Would you reccomend us to a friend? </legend>
+          
+          <!-- Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute. Each radio button must have a value attribute.-->
+            <input type="radio" name="flikelyhood" id="fdefinet" value="definetly">
+            <label for="definetly">Definetly</label>
+            <input type="radio" name="flikelyhood" id="fmaybe" value="maybe">
+            <label for="maybe">Maybe</label>
+            <input type="radio" name="flikelyhood" id="fno" value="no">
+            <label for="no">No</label>
+        </fieldset>
+        <fieldset>
+        <legend>What is your favourite feature of this website? </legend>
+          <!-- Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute. -->
+            <select name="ffavfeatures" id="ffavfeatures">
+                <option value= "none" selected disabled>Select an Option</option>
+                <option value="ffavchallen">Challenges</option>
+                <option value="ffavprojects">Projects</option>
+                <option value="ffavcommun">Community</option>
+                <option value="ffavopens">Open Source</option>
+        </select>
+        </fieldset>
+    
+        
+        <fieldset>
+        <legend>What would you like to see improved?</legend>
+            <label for="fimprove_front">Front-End Projects</label>
+            <input type="checkbox" value="fimprove_front" name="fimprove_front"><br/>
+            <label for="fimprove_back">Back-End Projects</label>
+            <input type="checkbox" value="fimprove_back" name="fimprove_back"><br/>
+            <label for="fimprove_datavis">Data Visualisation</label>
+            <input type="checkbox" value="fimprove_datavis" name="fimprove_datavis"><br/>
+            <label for="fimprove_challen">Challenges</label>
+            <input type="checkbox" value="fimprove_challen" name="fimprove_challen"><br/>
+            <label for="fimprove_opensource">Open Source community</label>
+            <input type="checkbox" value="fimprove_opensource" name="fimprove_opensource"><br/>
+            <label for="fimprove_gitterh">Gitter help rooms</label>
+            <input type="checkbox" value="fimprove_gitterh" name="fimprove_gitterh"><br/>
+        </fieldset>
+    
+        <fieldset>
+        <legend>Any Comments or Suggestions? </legend>
+            <!--Inside the form element, I am presented with a textarea at the end for additional comments. -->
+            <textarea id="fleaverev" name="fleaverev" rows="6" cols="40" placeholder="Leave a review"></textarea>
+        </fieldset>
+      
+      <!--Inside the form element, I am presented with a button with id="submit" to submit all my inputs.-->       <div class="submit">
+        <input type="submit" id="submit" value="Submit">
+      </div>
+    </form>
+</body>
+</html>

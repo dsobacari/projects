@@ -1,0 +1,50 @@
+body {
+  color: green;
+}
+p {color: gray;}
+
+form{
+  width: 450px; /*controls the width of the form. Forces form elements to wrap on a new lineotherwise they sit in one line. */
+  padding: 20px;
+}
+
+fieldset{
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 25px;
+  border: 2px solid green;
+}
+
+legend {
+  color: green;
+  background-color: #efefef;
+  border: 1.5px solid gray;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-align: left;  
+}
+
+.submit {
+  padding: 10px 20px;
+  text-align: right;
+}
+#submit {
+  background-color: transparent;
+  border: 1px solid green;
+  border-radius: 10px;
+  padding: 10px 32px;
+  font-size: 16px;
+  color: green;
+}
+
+#submit:hover {
+  color: white;
+  background-color: green;
+  border: 1.5px solid green;
+  border-radius: 10px;
+  padding: 10px 35px;
+  font-size: 16px;
+}
+#fleaverev, #email, #name, #number {
+  border: 1.5px solid green;
+}
