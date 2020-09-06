@@ -4,7 +4,7 @@
 3 === '3'  // false
 */
 function testStrict(val) {
-  if (val===7) { // Change this line
+  if (val===7) {
     return "Equal";
   }
   return "Not Equal";
