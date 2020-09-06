@@ -6,86 +6,101 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1 id="title">Responsive Web Design Projects - Build a Survey Form</h1>
-        <p id="description">Thank you for taking the time to fill up this form</p>
-    </header>
-    <form action="" target="_self">
+    <!-- Landing page should have a header element with a corresponding id="header". -->
+    <header id="header">
+        <!-- An image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
+        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?cs=srgb&dl=pexels-expect-best-323780.jpg&fm=jpg" id="header-img" alt="architecture house by the water">  
 
-        <fieldset>
-        <legend>Your Information: </legend>
-            
-            <label for="name">Name: </label>
-            <input type="text" id="name" required name="name" placeholder="Enter your name">
-            <label for="email">Email: </label>
-            <input type="email" id="email" name="email" placeholder="Enter your email">
-            <label for="age">Age: </label>
-            <input type="number" id="age" name="age" placeholder="Enter your age">
-        </fieldset>
-    
-        <fieldset>
-        <legend>What describes you the best? </legend>
-            <select name="fdescribes" id="fdescribes" defa>
-                <option value= "none" selected disabled>Select an Option</option>
-                <option value="fstudent">Student</option>
-                <option value="fftjob">Full-time Job</option>
-                <option value="fftlearner">Full-time Learner</option>
-                <option value="fprefernot">Prefer Not to Say</option>
-                <option value="fother">Other</option>
-            </select>
-            
-        </fieldset>
-    
-        <fieldset>
-        <legend>Would you reccomend us to a friend? </legend>
-            <input type="radio" id="fdefinetly" name="fdefinetly">
-            <label for="fdefinetly">Definetly</label>
-            <input type="radio" id="fmaybe" name="fmaybe">
-            <label for="fmaybe">Maybe</label>
-            <input type="radio" id="fno" name="fno">
-            <label for="fno">No</label>
-        </fieldset>
-        <fieldset>
-        <legend>What is your favourite feature of this website? </legend>
-            <select name="ffavfeatures" id="ffavfeatures">
-                <option value= "none" selected disabled>Select an Option</option>
-                <option value="ffavchallen">Challenges</option>
-                <option value="ffavprojects">Projects</option>
-                <option value="ffavcommun">Community</option>
-                <option value="ffavopens">Open Source</option>
-        </select>
-        </fieldset>
-    
-        
-        <fieldset>
-        <legend>What would you like to see improved?</legend>
-            <label for="fimprove_front">Front-End Projects</label>
-            <input type="checkbox" id="fimprove_front" name="fimprove_front">
-            <label for="fimprove_back">Back-End Projects</label>
-            <input type="checkbox" id="fimprove_back" name="fimprove_back">
-            <label for="fimprove_datavis">Data Visualisation</label>
-            <input type="checkbox" id="fimprove_datavis" name="fimprove_datavis">
-            <label for="fimprove_challen">Challenges</label>
-            <input type="checkbox" id="fimprove_challen" name="fimprove_challen">
-            <label for="fimprove_opensource">Open Source community</label>
-            <input type="checkbox" id="fimprove_opensource" name="fimprove_opensource">
-            <label for="fimprove_opensource">Gitter help rooms</label>
-            <input type="checkbox" id="fimprove_opensource" name="fimprove_opensource">
-        </fieldset>
-    
-        <fieldset>
-        <legend>Any Comments or Suggestions? </legend>
-            <textarea id="fleaverev" name="fleaverev" rows="4" cols="50" placeholder="Leave a review"></textarea>
-        </fieldset>
-    
-    
-    
-    
-    
-      <!--Submit button-->  
-      
-      <input type="submit" value="Submit">
-    </form>
-    
+        <!-- Within the #header element, a nav element with a corresponding id="nav-bar". -->
+        <nav id="nav-bar">
+            <!-- at least three clickable elements inside the nav element, each with the class nav-link. -->
+            <ul>
+                <!-- clicking a .nav-link button in the nav element, takes to the corresponding section of the landing page. -->
+                <li class="nav-link"><a href="#home">Home</a></li>
+                <li class="nav-link"><a href="#services">Services</a></li>
+                <li class="nav-link"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+ 
+    <main>
+        <section>
+            <div>
+                <!-- Able to watch an embedded product video with id="video". -->        
+                <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe id="video" src="https://player.vimeo.com/video/130654451?autoplay=1&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </div><script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
+            <div>
+            <!-- Landing page has a form element with a corresponding id="form". -->
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+
+                <!-- Within the form, there is an input field with id="email" where an email address can be entered. -->
+                <!-- The #email input field should have placeholder text to let the user know what the field is for. -->
+                <!-- The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
+                <input type="email" name="email" id="email" pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" placeholder="Enter your email">
+
+                <!-- Within the form, there is a submit input with a corresponding id="submit". -->
+                <input type="submit" id="submit" value="submit">
+
+                <!-- When the #submit element clicked, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit) -->
+            </form>
+            </div>
+            <div>
+                <p>While the notion that structural and aesthetic considerations should be entirely subject to functionality was met with both popularity and skepticism, it had the effect of introducing the concept of "function" in place of Vitruvius' "utility". "Function" came to be seen as encompassing all criteria of the use, perception and enjoyment of a building, not only practical but also aesthetic, psychological and cultural.</p>
+            </div>
+        </section>
+
+        <section id="services">
+            <div><img src="https://image.freepik.com/free-photo/condo-project-black_190619-4.jpg" alt=""></div>
+            <div>
+                <p>Remodeling</p>
+                <p>Interior architecture</p>
+                <p>Architecture and Planning</p>
+                <p>Outdoor & Site Planning</p>
+            </div>
+            <div>
+                <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+            </div>
+        </section>
+
+
+
+        <section id="contact">
+            <div class="address">
+                <address>
+                    Westeroics LLC<br>
+                    Westeroics.com<br>
+                    123 Somewhere St.<br>
+                    Winterfell,
+                    Kingdom of the North
+                  </address>
+                  <p>Let us know how we can help you. For inquiries, please send us a note to  email address or use the contact form.</p>
+            </div>    
+
+            <div class="form">
+                <form action="" target="_self" id="survey-form">               
+                        <label for="firstname">Name: </label>
+                        <input type="text" name="firstname" placeholder="Enter your name" required><br/>
+                        <label for="firstname">Last Name: </label>
+                        <input type="text" name="firstname" placeholder="Enter your name" required><br/>                 
+                        <label for="email">Email: </label>
+                        <input type="email" name="email" placeholder="Enter your email" required><br/>
+                        <label for="subject">Subject: </label>
+                        <input type="text" name="subject" placeholder="Enter subject" required><br/>
+                        <label for="message">Message: </label>
+                        <textarea name="message" rows="6" cols="40" placeholder="Leave a message"></textarea>
+                </form>
+            </div>
+            <div>
+                <img src="https://images.pexels.com/photos/1849127/pexels-photo-1849127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+            </div>      
+        </section>
+
+
+    </main>
+    <footer></footer>
+       
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
