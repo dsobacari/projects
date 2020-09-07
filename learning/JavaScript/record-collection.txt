@@ -18,8 +18,9 @@ var collection = {
     albumTitle: 'ABBA Gold'
   }
 };
+
 //collection[5439].artist = "ABBA"
-console.log(collection);
+//console.log(collection);
 
 function updateRecords(object, id, prop, value) {
 //If prop isn't tracks and value isn't an empty string
