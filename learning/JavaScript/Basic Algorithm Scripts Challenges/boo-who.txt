@@ -2,6 +2,7 @@ function booWho(bool) {
 return typeof bool === 'boolean' ?   true :  false;
 }
 
+
 booWho(null);
 booWho(true)            // should return true.
 booWho(false)           // should return true.
