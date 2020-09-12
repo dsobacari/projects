@@ -21,52 +21,51 @@
             <!-- at least three clickable elements inside the nav element, each with the class nav-link. -->
             <ul>
                 <!-- clicking a .nav-link button in the nav element, takes to the corresponding section of the landing page. -->
-                <li class="nav-link"><a href="#home">Home</a></li>
-                <li class="nav-link"><a href="#services">Services</a></li>
-                <li class="nav-link"><a href="#contact">Contact</a></li>
+                <li><a class="nav-link" href="#home">Home</a></li>
+                <li><a class="nav-link" href="#services">Services</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
  
     <main id="main">
         <section id ="top-section">
-            <div>
-                <!-- Able to watch an embedded product video with id="video". -->        
-                <div style="padding:56.25% 0 0 0;position:relative; z-index: 0">
-                    <iframe id="video" src="https://player.vimeo.com/video/130654451?autoplay=1&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-                </div><script src="https://player.vimeo.com/api/player.js"></script>
-            </div>
-            <div>
+            <!-- Able to watch an embedded product video with id="video". -->        
+            <div id="home" style="padding:56.25% 0 0 0;position:relative; z-index: 0">
+                <iframe id="video" src="https://player.vimeo.com/video/130654451?autoplay=1&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+            </div><script src="https://player.vimeo.com/api/player.js"></script>
             <!-- Landing page has a form element with a corresponding id="form". -->
-            <div>
+            <div id ="form-holder">
                 <form id="form" action="https://www.freecodecamp.com/email-submit">
 
-                    <!-- Within the form, there is an input field with id="email" where an email address can be entered. -->
-                    <!-- The #email input field should have placeholder text to let the user know what the field is for. -->
-                    <!-- The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
-                    <input type="email" name="email" id="email" pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" placeholder="Enter your email">
+                <!-- Within the form, there is an input field with id="email" where an email address can be entered. -->
+                <!-- The #email input field should have placeholder text to let the user know what the field is for. -->
+                <!-- The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
+                <input type="email" name="email" id="email" pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" placeholder="Enter your email">
 
-                    <!-- Within the form, there is a submit input with a corresponding id="submit". -->
-                    <input type="submit" id="submit" value="submit">
+                <!-- Within the form, there is a submit input with a corresponding id="submit". -->
+                <input type="submit" id="submit" value="submit">
 
-                    <!-- When the #submit element clicked, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit) -->
+                <!-- When the #submit element clicked, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit) -->
                 </form>
             </div>
-            </div>
-            <div>
+            
+            <div id="mission-holder">
                 <p>While the notion that structural and aesthetic considerations should be entirely subject to functionality was met with both popularity and skepticism, it had the effect of introducing the concept of "function" in place of Vitruvius' "utility". "Function" came to be seen as encompassing all criteria of the use, perception and enjoyment of a building, not only practical but also aesthetic, psychological and cultural.</p>
             </div>
         </section>
 
         <section id="services">
-            <div><img src="https://image.freepik.com/free-photo/condo-project-black_190619-4.jpg" alt=""></div>
-            <div>
-                <p>Remodeling</p>
-                <p>Interior architecture</p>
-                <p>Architecture and Planning</p>
-                <p>Outdoor & Site Planning</p>
-            </div>
-            <div>
+            <div id="services-top">
+                <div id="services-img"><img src="https://image.freepik.com/free-photo/condo-project-black_190619-4.jpg" alt=""></div>
+                <div id="services-desc">
+                    <p>Remodeling</p>
+                    <p>Interior architecture</p>
+                    <p>Architecture and Planning</p>
+                    <p>Outdoor & Site Planning</p>
+                </div>
+            </div>    
+            <div id="service-bottom">
                 <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
             </div>
         </section>
@@ -81,25 +80,35 @@
                     123 Somewhere St.<br>
                     Winterfell,
                     Kingdom of the North
-                  </address>
-                  <p>Let us know how we can help you. For inquiries, please send us a note to  email address or use the contact form.</p>
+                </address>
+                <p>Let us know how we can help you. For inquiries, please send us a note to  email address or use the contact form.</p>
             </div>    
 
             <div class="form">
-                <form action="" target="_self" id="survey-form">               
-                        <label for="firstname">Name: </label>
-                        <input type="text" name="firstname" placeholder="Enter your name" required><br/>
-                        <label for="firstname">Last Name: </label>
-                        <input type="text" name="firstname" placeholder="Enter your name" required><br/>                 
-                        <label for="email">Email: </label>
-                        <input type="email" name="email" placeholder="Enter your email" required><br/>
-                        <label for="subject">Subject: </label>
-                        <input type="text" name="subject" placeholder="Enter subject" required><br/>
-                        <label for="message">Message: </label>
-                        <textarea name="message" rows="6" cols="40" placeholder="Leave a message"></textarea>
-                </form>
+                <form action="" target="_self" id="survey-form"> 
+                        <div class="formrow">              
+                            <label for="firstname">Name: </label>
+                            <input type="text" name="firstname" placeholder="Enter your name" required><br/>
+                        </div>
+                        <div class="formrow">
+                            <label for="firstname">Last Name: </label>
+                           <input type="text" name="firstname" placeholder="Enter your name" required><br/>                 
+                        </div>
+                        <div class="formrow">
+                            <label for="email">Email: </label>
+                            <input type="email" name="email" placeholder="Enter your email" required><br/>
+                        </div>
+                        <div class="formrow">
+                            <label for="subject">Subject: </label>
+                            <input type="text" name="subject" placeholder="Enter subject" required><br/>
+                        </div>
+                        <div class="formrow">
+                            <label for="message">Message: </label>
+                            <textarea rows="6" cols="30" placeholder="Leave a message"></textarea>
+                        </div>
+                    </form>
             </div>
-            <div>
+            <div id="contact-img">
                 <img src="https://images.pexels.com/photos/1849127/pexels-photo-1849127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
             </div>      
         </section>
@@ -110,9 +119,9 @@
         <ul>
             <li><a href="#">Privacy</a></li>
             <li><a href="#">Terms</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <span>Copyright 2020 The Best Architect Company</span>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+        <span>Copyright 2020 The Best Architect Company</span>
     </footer>
        
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

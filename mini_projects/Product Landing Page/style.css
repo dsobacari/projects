@@ -3,9 +3,7 @@
     margin: 0;
     
 }
-body {
-    background-color: red;
-}
+
 img {
         max-width: 100%;
         height: auto;
@@ -38,17 +36,18 @@ header {
 }
 
 #main {
+    padding: 50px;
     margin-top: 85px;
     grid-column-start: span 3;
     background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
 }
 
 #footer {
     grid-column-start: span 3;
-    background-color: yellowgreen;
     display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
 }
 
 
@@ -63,10 +62,6 @@ header {
     text-shadow: rgb(229, 229, 229);
 }
 
-#nav-bar {
-
-    
-}
 
 #nav-bar ul {
     display: flex;
@@ -104,9 +99,11 @@ header {
 }
 
 #top-section {
-    align-content: center;
+    display: flex;
+    flex-direction: column;
 }
 #form {
+    display: flex;
     padding: 12px;
     margin: 6px 0 4px;
     border: 1px solid #ccc; 
@@ -115,15 +112,158 @@ header {
     font-size: 12px;
     line-height: normal;
     border-radius: 2px;
+    justify-content: center;
+
 }
 
 #email {
-    align-self: center;
-    word-spacing: normal;
     text-transform: none;
     text-indent: 0px;
     text-shadow: none;
-    display: inline-block;
-    text-align: start;
+    flex:1;
+    justify-content: center;
 
+}
+
+#mission-holder {
+    flex:1;
+    justify-content: center;
+}
+
+#services {
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#services-top {
+    padding: 10px;
+    display: flex;
+    flex-basis: 40%;
+}
+#services-img {
+    padding: 5px;
+    flex:1;
+    width: auto;
+    height:auto;
+    max-width: 100;
+}
+
+#services-desc {
+    padding: 10px;
+    flex: 1;
+    color: #1a3aac;
+}
+@media (min-width:600px){
+    #services-top {
+        padding: 10px;
+    }
+}
+
+#services-desc p {
+    margin-bottom: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+#service-bottom p, #mission-holder {
+    color: rgb(170, 170, 170);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+
+}
+
+
+#contact{
+    display: flex;
+    margin-top: 85px;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.address {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    margin: 10px;
+}
+
+.address address {
+    flex:1;
+    color:rgb(27, 68, 132);
+    line-height: 30px;
+}
+.address p{
+    flex:1;
+    color: rgb(170, 170, 170);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+
+
+
+
+
+.form{
+    flex:1;
+    margin: 10px;
+}
+
+.formrow {
+    padding: 1px 0px;
+    display: flex;
+}
+.formrow input{
+    padding-right: 10px;
+    flex:1;
+}
+.formrow label {
+    flex:1;
+    color: rgb(170, 170, 170);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+}
+
+
+
+#contact-img {
+    flex:1;
+    min-width: 25%;
+    
+}
+#contact-img img{
+    max-width: 100%;
+    height: auto;
+}
+
+#footer ul{
+    display:flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: space-between;
+
+
+}
+#footer li {
+    flex: 1;
+    margin: 20px;
+    
+}
+#footer span {
+    flex:1;
+    margin: 20px;
+    
+}
+
+#footer a {
+    text-decoration: none;
+    color: #1a3aac;
+    
+}
+#footer a:hover {
+    color: #5c84f4;
 }
