@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+<div id="main-wrapper">
     <!-- Landing page should have a header element with a corresponding id="header". -->
     <header id="header">
         <!-- An image within the header element with a corresponding id="header-img". A company logo would make a good image here. -->
-      <div class= "logo">
-        <img src="https://cdn.pixabay.com/photo/2014/11/13/17/46/zirkel-529678_960_720.jpg" id="header-img" alt="architecture house by the water">
-      </div>  
+        <div class= "logo">
+            <img src="https://cdn.pixabay.com/photo/2014/11/13/17/46/zirkel-529678_960_720.jpg" id="header-img" alt="architecture house by the water">
+            <p>The Best Architect Company</p>
+        </div>  
 
         <!-- Within the #header element, a nav element with a corresponding id="nav-bar". -->
         <nav id="nav-bar">
@@ -26,28 +28,30 @@
         </nav>
     </header>
  
-    <main>
-        <section>
+    <main id="main">
+        <section id ="top-section">
             <div>
                 <!-- Able to watch an embedded product video with id="video". -->        
-                <div style="padding:56.25% 0 0 0;position:relative;">
+                <div style="padding:56.25% 0 0 0;position:relative; z-index: 0">
                     <iframe id="video" src="https://player.vimeo.com/video/130654451?autoplay=1&loop=1" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                 </div><script src="https://player.vimeo.com/api/player.js"></script>
             </div>
             <div>
             <!-- Landing page has a form element with a corresponding id="form". -->
-            <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <div>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
 
-                <!-- Within the form, there is an input field with id="email" where an email address can be entered. -->
-                <!-- The #email input field should have placeholder text to let the user know what the field is for. -->
-                <!-- The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
-                <input type="email" name="email" id="email" pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" placeholder="Enter your email">
+                    <!-- Within the form, there is an input field with id="email" where an email address can be entered. -->
+                    <!-- The #email input field should have placeholder text to let the user know what the field is for. -->
+                    <!-- The #email input field uses HTML5 validation to confirm that the entered text is an email address. -->
+                    <input type="email" name="email" id="email" pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" placeholder="Enter your email">
 
-                <!-- Within the form, there is a submit input with a corresponding id="submit". -->
-                <input type="submit" id="submit" value="submit">
+                    <!-- Within the form, there is a submit input with a corresponding id="submit". -->
+                    <input type="submit" id="submit" value="submit">
 
-                <!-- When the #submit element clicked, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit) -->
-            </form>
+                    <!-- When the #submit element clicked, the email is submitted to a static page (use this mock URL: https://www.freecodecamp.com/email-submit) -->
+                </form>
+            </div>
             </div>
             <div>
                 <p>While the notion that structural and aesthetic considerations should be entirely subject to functionality was met with both popularity and skepticism, it had the effect of introducing the concept of "function" in place of Vitruvius' "utility". "Function" came to be seen as encompassing all criteria of the use, perception and enjoyment of a building, not only practical but also aesthetic, psychological and cultural.</p>
@@ -102,8 +106,16 @@
 
 
     </main>
-    <footer></footer>
+    <footer id="footer">
+        <ul>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <span>Copyright 2020 The Best Architect Company</span>
+    </footer>
        
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</div>
 </body>
 </html>
