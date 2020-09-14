@@ -10,3 +10,9 @@ function repeatStr (n, s) {
   repeatStr(3, "*")
   repeatStr(5, "#")
   repeatStr(2, "ha ")
+
+  /* Better practice
+    function repeatStr (n, s) {
+    return s.repeat(n);
+}
+  */
