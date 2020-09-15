@@ -1,0 +1,234 @@
+/* ------------base styling----------------- */
+
+/* css variable also know custom properties */
+:root {
+    --primary-color :#e50914; /*that Netflix red color*/
+    --dark-color :#141414; /*that Netflix red color*/
+}
+
+/* add a reset */
+* {
+    box-sizing: border-box; /* so it doesn't padding affect the width or anything like that*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Original site is Helvetica but its not free one */
+    -webkit-font-smoothing: antialiased;/*fonts smoothing anti-alias... vendor prefix webkits */
+    background: #000;
+    color:#999;
+}
+
+ul {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    color: #fff;
+}
+
+a {
+    color:#fff;
+    text-decoration: none;
+}
+
+p {
+    margin: 0.5rem 0; /* 1 rem unit is equal to whatever the number of the pixel of the font-size is of the root html element. 0.5 is going to equal 8px (16px * 0.5) */
+}
+
+img {
+    width: 100%; /* of the container they in */
+}
+
+
+/*================================HEADER================================*/
+
+.showcase {
+    width: 100%;
+    height: 93vh; /* 93 viewport hight, the hight of the window, basically out of 100 slices across taking 93. */
+    position: relative; /*to position some stuff absolute in children*/
+    background: url('img/background.jpg');
+}
+
+.showcase::after { /*pseudo class to add the inset shadow to the background image*/
+    content: '';/*if used before&&after we need content nut its not necessarry to fill it*/
+    position: absolute; /*because it needs to be position within the .showcase*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* to bring it towards us on top of everything, basically to live te background image in the back... */
+    background:rgba(0,0,0,0.6);/*to test it and see if it covers it set it to red.  but rgba to be transparent black and 0.6 transparency/alpha value*/
+    box-shadow: inset 120px 100px 250px #000000;
+}
+
+.showcase-top {
+    position: relative; /*to position some stuff absolute in children as well*/
+    z-index: 2; /*after setting the shadow z-index=1, the buttons need to be brought forward more */
+    height: 90px;
+}
+
+.showcase-top img {
+    width: 170px;  /* cuting image down so it looks like in the original website*/
+    position: absolute; /*basically we positioning it absolute to the parent element that has position relative (.showcase-top)*/
+    top: 50%;   /*going down 50% within the parent*/
+    left: 50%;  /*from the left 50% within the parent*/
+    transform: translate(-50%, -50%); /* to perfectly center and put in place the Netflix image. Since showcase-top is height: 90px; brings it to 50% top & left , and plus the actual size of the image included its not perfectly centered.   */
+}
+
+.showcase-top a {
+    position: absolute;
+    top: 50%; /* going down 50% within the parent */
+    right: 0; /* and bring it all the way to the right */
+    transform: translate(-50%, -50%); /* to perfectly center */
+}
+
+.showcase-content {
+    position: relative;
+    z-index: 2; /*same as .showcase-top*/
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem; /*bring it down a quite bit */
+}
+
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin: 0 0 2rem 0; /*top 0 right 0 bottom 2 left 0*/
+}
+
+.showcase-content p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+/*=================================TABS=================================*/
+
+.tabs {
+    background: var(--dark-color);
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+}
+
+.tabs .container { /* .container needs to be the grid, that way it targets the 3 .tabs items */ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);/* repeating 1 fraction of the alocated space 3 times */
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.tabs p {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+}
+
+.tabs .container > div{
+    padding: 1.5rem 0; 
+}
+
+.tabs .container > div:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+.tab-border {
+    border-bottom: var(--primary-color) 4px solid;
+}
+
+
+/*=================================TABS=CONTENT=================================*/
+.tab-content {
+    padding: 3rem 0;
+    background: #000;
+    color: white;
+}
+
+#tab-1-content .tab-1-conntent-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+/*Utilities classes at the bottom*/
+/*Container*/
+.container {
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden; /*everything needs to stay within the container*/
+    padding: 0rem 1rem;  /*up and bottom*/
+}
+
+/*Text Styles*/
+.text-xl { 
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.text-lg { 
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-dark {
+    color: #999;
+}
+
+/*Buttons*/
+.btn {
+    display: inline-block; /* it's inline but to add height and stuff like that */
+    background: var(--primary-color); /*plug in the variable */
+    color: #fff;
+    padding: 0.4rem 1.3rem; /* 0.4rem top & bottom 1.3rem left & right */
+    font-size: 1rem; /* 1 rem = 16pixels */
+    text-align: center;
+    border: none;
+    cursor: pointer; 
+    margin-right: 0.5rem; /*just in case of a decision to add another button in the future*/
+    outline: none; /*outlines do not take up space. When you add a border, the element's total width/height in the document increases, but that doesn't happen with outline. */
+    box-shadow: 0 1px 0 rgba(0,0,0,0.45); /* 0 and 1px offsets relative to the element, 0 blur and spread radius, and rgba(0,0,0,0.45) color. */
+    border-radius: 2px; /*rounding the corners*/
+}
+.btn:hover {
+    opacity: 0.9; /*a little bit of se through*/
+}
+
+.btn-rounded {
+    border-radius: 5px;
+}
+
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}
+
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
