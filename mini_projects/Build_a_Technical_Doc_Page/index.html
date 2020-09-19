@@ -1,0 +1,124 @@
+<link rel="stylesheet" href="style.css">
+
+<nav id="navbar">
+  <header>
+    CSS Documentation
+  </header>
+  <ul>
+    <li><a class= "nav-link" href="#introduction">Introduction</a></li>
+    <li><a class= "nav-link" href="#color">Color</a></li>
+    <li><a class= "nav-link" href="#text">Text</a></li>
+    <li><a class= "nav-link" href="#boxes">Boxes</a></li>
+    <li><a class= "nav-link" href="#lists">Lists</a></li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+    <section id="introduction" class="main-section">
+      <header>Introduction</header>
+      <p>CSS allows you to create rules that control the
+way that each individual box (and the contents
+of that box) is presented.</p>
+      <p>CSS works by associating rules with HTML elements. These rules govern
+how the content of specified elements should be displayed. A CSS rule
+contains two parts: a selector and a declaration.</p>
+      <pre><code class="css">
+p {
+  color: red;
+  text-align: center;
+}   </code></pre>
+    </section>
+    <section id="color" class="main-section">    
+      <header>Color</header>
+      <p>The color property allows you
+to specify the color of text inside
+an element. You can specify any
+        color in CSS in one of three ways:</p>
+      <p>Above each CSS rule in this
+example you can see how CSS
+allows you to add comments
+to your CSS files. Anything
+between the /* symbols and
+the */ symbols will not be
+interpreted by the browser.
+They are shown in grey above.</p>
+      <pre><code class="css">
+        border:2px solid Tomato;
+        border:2px solid DodgerBlue;
+        border:2px solid Violet
+      </code></pre>
+    </section>
+    <section id="text" class="main-section">
+      <header>Text</header>
+      <p>The formatting of your text can have a significant effect
+on how readable your pages are. As we look through these
+properties I will also give you some design tips on how to
+        display your type.</p>
+      <p>The font-family property
+allows you to specify the
+typeface that should be used for
+any text inside the elements to
+which a CSS rule applies.</p>
+      <pre><code>
+p {
+  text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+}
+</code></pre>
+    </section>
+    <section id="boxes" class="main-section">
+      <header>Boxes</header>
+      <p>CSS treats each HTML
+        element as if it lives in its own box.</p>
+      <p>You can set several properties that affect the appearance of
+these boxes</p>
+      <pre><code>
+div {
+  width: 300px;
+  border: 15px solid green;
+  padding: 50px;
+  margin: 20px;
+}</code></pre>
+    </section>
+    <section id="lists" class="main-section">    
+      <header>Lists</header>
+      <p>There are several CSS properties that
+were created to work with specific types
+of HTML elements, such as lists, tables,
+and forms.
+</p>
+      <p>Lists are indented into the page
+by default and the list-styleposition property indicates
+whether the marker should
+appear on the inside or the
+outside of the box containing the
+main points.</p>
+      <pre><code>
+ul.a {
+  list-style-type: circle;
+}
+
+ul.b {
+  list-style-type: square;
+}
+
+ol.c {
+  list-style-type: upper-roman;
+}
+
+ol.d {
+  list-style-type: lower-alpha;
+}</code></pre>
+      <ul>
+        <b>The CSS list properties allow you to:</b>
+        <li>Set different list item markers for ordered lists</li>
+        <li>Set different list item markers for unordered lists</li>
+        <li>Set an image as the list item marker</li>
+        <li>Add background colors to lists and list items</li>
+        <li>Style lists with colors, to make them look a little more interesting.</li>
+      </ul>
+    </section>
+</main>
+
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

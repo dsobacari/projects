@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box; /* so it doesn't padding affect the width or anything like that*/
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-family: 'Helvetica', 'Arial', sans-serif; 
+    -webkit-font-smoothing: antialiased;/*fonts smoothing anti-alias... vendor prefix webkits */
+    background: #000;
+    color:#999;
+}
+
+ul {
+    list-style: none; /*no dots*/
+}
+
+h1, h2, h3, h4 {
+    color: #fff;
+}
+
+a {
+    color:#fff;
+    text-decoration: none; /*no underline and such*/
+}
+
+p {
+    margin: 0.5rem 0; /* 1 rem unit is equal to whatever the number of the pixel of the font-size is of the root html element. 0.5 is going to equal 8px (16px * 0.5) */
+}
+
+img {
+    width: 100%; /* of the container they in */
+}
+
+#navbar {
+    position: fixed; /*to position ul absolute in children as well*/
+    height: 80px;
+    width: 100%;
+    background-color: #FDB833;
+    z-index:9;
+}
+
+#navbar ul{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#navbar li{
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    border-bottom: 4px solid #476A6F;
+    margin-left: 1px;
+
+}
+#navbar li:hover{
+    background-color: #476A6F;
+}
+#navbar a{
+    text-transform: uppercase;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+
+
+#welcome-section {
+    margin-top: 80px;
+    width: 100%;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1520238950376-fe31e8ae5248?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=994&q=80') no-repeat center center;
+    background-size: cover;
+    opacity: 0.7;
+}
+
+#welcome-section-content{
+    margin-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#welcome-section h1{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 5.2rem;
+    margin: 0 0 2rem 0; /*top 0 right 0 bottom 2 left 0*/
+}
+
+#welcome-section p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+#projects {
+    margin-top: 90px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.project-tile  {
+    display: flex;
+    margin: 4px 4px;
+    padding: 4px 4px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    background-color: #FDB833;
+    border-radius: 4px;
+  }
+
+.project-tile:hover{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #476A6F;
+    opacity: 0.9;
+
+}
+.project-tile img {
+    border-radius: 4px;
+    border: 0.4rem 0.4rem #476A6F;
+    max-width: 400px;
+    
+}
+
+.project-tile h4 {
+    font-size: 1.5rem;
+    margin: 1rem 1rem;
+    text-align: center;
+}
+
+#contact {
+    display: flex;
+    margin-top: 90px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 120vh;
+    background-color: #476A6F;    
+}
+
+#contact h2{
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.9rem;
+    line-height: 1;
+    margin: 0 0 2rem 0;
+}
+
+#contact-content {
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem 0;
+}
+
+#contact-content a:hover{
+    opacity: 0.6;
+  
+}
+
+footer {
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+body{
+    flex-direction: column;
+  }
+
+#navbar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+#navbar ul{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#navbar li{
+    height: auto;
+    display: column;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    border-bottom: 0px solid;
+    border-left: 4px solid #476A6F;
+    margin-left: 0px;
+    margin-bottom: 3px;
+
+}
+#navbar li:hover{
+    background-color: #476A6F;
+}
+  
+#welcome-section {
+    margin-top: 0px;
+}
+}

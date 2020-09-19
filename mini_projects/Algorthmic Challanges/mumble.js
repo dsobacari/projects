@@ -21,3 +21,9 @@ function accum(s) {
     aux= aux + '-'; // append dash at the end of each sequence
   } return aux.slice(0,-1); // return the whole string with no dash at the last one
 }
+
+/*
+function accum(s) {
+    return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+}
+*/
