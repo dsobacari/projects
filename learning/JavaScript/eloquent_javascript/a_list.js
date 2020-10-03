@@ -18,13 +18,15 @@ function arrayToList(arr) {
 
 
 /* 
-    To run over a list (in listToArray and nth), a for loop specification like this can be used:
-    for (let node = list; node; node = node.rest) {}
+  To run over a list (in listToArray and nth), a for loop specification like this can be used:
+  for (let node = list; node; node = node.rest) {}
+
+  Every iteration of the loop, node points to the current sublist, and the body can read its value property to get the current element. At the end of an iteration, node moves to the next sublist. When that is null, we have reached the end of the list, and theloop is finished.
 */
 
 function listToArray(list) {
 let arr = [];
-  for (let node = list; node; node = node.rest) {
+  for (let node = list; node; node = node.rest) { // see above for explanation
       arr.push(node.value);
   } return arr;
 }
@@ -33,6 +35,8 @@ function prepend(element, list)	{
   Object.assign(newList, {value: element, rest: list});
   return newList;
 }
+
+//The recursive version of nth will, similarly, look at an ever smaller part of the “tail” of the list and at the same time count down the index until it reaches zero, at which point it can return the value property of the node it is looking at. To get the zeroth element of a list, you simply take the value property of its head node. To get element N + 1, you take the Nth element of the list that’s in this list’s rest property.
 
 function nth(list, number) {
 if (!list) return undefined;
