@@ -8,6 +8,17 @@ function translatePigLatin(str) {
     return str.match(startsWithVowel) ? str + 'way' : 
      str.replace(startsWithCons, '') + str.match(startsWithCons) + 'ay';
   }
+
+
+
+
+//function translatePigLatin(str) {
+//    return str
+//      .replace(/^[aeiou]\w*/, "$&way")
+//      .replace(/(^[^aeiou]+)(\w*)/, "$2$1ay");
+//  }
+
+
   //translatePigLatin("paragraphs")
   //translatePigLatin("california");
   //translatePigLatin("eight")
