@@ -20,7 +20,7 @@ function pairElement(str) {
     return(arr);  
   }
 
-  
+
 /* very elegant
   function pairElement(str) {
     //create object for pair lookup
@@ -36,7 +36,7 @@ function pairElement(str) {
     return arr.map(x => [x, pairs[x]]);
   }
 
-/*
+*/
 
 
 pairElement("ATCGA")
