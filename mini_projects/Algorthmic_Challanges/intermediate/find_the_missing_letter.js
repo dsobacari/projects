@@ -12,6 +12,19 @@ function fearNotLetter(str) {
     }
     return undefined;
   }
-  
-  
+
+
+/* optimized and more elegant
+  var alphabet = 'abcdefghijklmnopqrstuvwxyz';
+  var len = str.length;
+  var start = alphabet.indexOf(str[0]);
+
+  for(let i = start; i < start + len; i++){
+    if(!str.includes(alphabet[i])){
+      return alphabet[i];
+    }
+  return undefined;
+*/
+
+
   fearNotLetter("abce");
