@@ -3,6 +3,7 @@
 //Then return the rest of the array once the condition is satisfied, otherwise, arr should be returned as an empty array.
 
 function dropElements(arr, func) {
+    //Use a while loop with Array.prototype.shift() to continue checking and dropping the first element of the array until the function returns true. It also makes sure the array is not empty first to avoid infinite loops.
     while (arr.length > 0 && !func(arr[0])) {
       arr.shift();//remove element;
     }
@@ -14,4 +15,4 @@ function dropElements(arr, func) {
   //dropElements([1, 2, 3], function(n) {return n > 0;});
   //dropElements([1, 2, 3, 4], function(n) {return n > 5;});
   //dropElements([1, 2, 3, 7, 4], function(n) {return n > 3;});
-  //dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;}) 
+  dropElements([1, 2, 3, 9, 2], function(n) {return n > 2;}) 
