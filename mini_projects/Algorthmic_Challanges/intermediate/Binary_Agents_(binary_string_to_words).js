@@ -3,12 +3,14 @@
 //The binary string will be space separated.
 
 function binaryAgent(str) {
-    let temp='';
+    let decoded='';
+
     str.split(' ')
-       .forEach(element => temp += String.fromCharCode(parseInt(element, 2)));
-    return temp;
+       .forEach(element => decoded += String.fromCharCode(parseInt(element, 2)));
+
+    return decoded;
   
-    //String.fromCharCode() - Convert a Unicode number into a character
+    //String.fromCharCode() - Converts a Unicode number into a character.
     //parseInt(string, radix) - parses a string and returns an integer in given radix(numeric base)
   }
   
