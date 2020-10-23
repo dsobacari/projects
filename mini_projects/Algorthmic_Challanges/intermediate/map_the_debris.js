@@ -1,33 +1,76 @@
-//Map the Debris
-//Return a new array that transforms the elements' average altitude into their orbital periods (in seconds).
+//Fill in the object constructor with the following methods below:
 
-//The array will contain objects in the format {name: 'name', avgAlt: avgAlt}.
+/*
+getFirstName()
+getLastName()
+getFullName()
+setFirstName(first)
+setLastName(last)
+setFullName(firstAndLast)
+*/
 
-//You can read about orbital periods on Wikipedia.
+//Run the tests to see the expected output for each method. The methods that take an argument must accept only one argument and it has to be a string. These methods must be the only available means of interacting with the object.
 
-//The values should be rounded to the nearest whole number. The body being orbited is Earth.
 
-//The radius of the earth is 6367.4447 kilometers, and the GM value of earth is 398600.4418 km3s-2.
-
-function orbitalPeriod(arr) {
-
-    const GM = 398600.4418;
-    const earthRadius = 6367.4447;
-    const newArr=[];
+var Person = function(firstAndLast) {
+    // Only change code below this line
+    // Complete the method below and implement the others similarly
+    
+    let fullName = firstAndLast;
+    
+    this.getFirstName = function() {
+      return fullName.split(' ')[0];
+    }
   
-    arr.forEach( x => {
-          let temp = {};
-          let a = earthRadius + x.avgAlt;
-          const orbitalPeriodT = Math.round(2* Math.PI * Math.sqrt(a**3/GM));
-          temp.name = x.name;
-          temp.orbitalPeriod = orbitalPeriodT; 
-          newArr.push(temp);
-        });
+    this.getLastName = function() {
+      return fullName.split(' ')[1];
+    }
   
-    return newArr;
+    this.getFullName = function() {
+      return fullName;
+    };
   
-  }
+    this.setFirstName = function(name) {
+      fullName = name + ' ' + fullName.split(' ')[1];
+    };
   
-  orbitalPeriod([{name : "sputnik", avgAlt : 35873.5553}]) //should return [{name: "sputnik", orbitalPeriod: 86400}].
+    this.setLastName = function(name)  {
+      fullName = fullName.split(' ')[0] + ' ' + name;
+    }
   
-  orbitalPeriod([{name: "iss", avgAlt: 413.6}, {name: "hubble", avgAlt: 556.7}, {name: "moon", avgAlt: 378632.553}]) //should return [{name : "iss", orbitalPeriod: 5557}, {name: "hubble", orbitalPeriod: 5734}, {name: "moon", orbitalPeriod: 2377399}].
+    this.setFullName = function(name) {
+      fullName = name;
+    }
+  };
+  
+  var bob = new Person('Bob Ross');
+  
+  
+  Object.keys(bob).length //should return 6.
+  
+  bob instanceof Person //should return true.
+  
+  bob.firstName //should return undefined.
+  
+  bob.lastName //should return undefined.
+  
+  bob.getFirstName() //should return "Bob".
+  
+  bob.getLastName() //should return "Ross".
+  
+  bob.getFullName() //should return "Bob Ross".
+  
+  bob.setFirstName("Haskell")
+  bob.getFullName() //should return "Haskell Ross" after bob.setFirstName("Haskell").
+  
+  bob.setLastName("Curry");
+  bob.getFullName() //should return "Haskell Curry" after bob.setLastName("Curry").
+  
+  bob.setFullName("Haskell Curry");
+  bob.getFullName() //should return "Haskell Curry" after bob.setFullName("Haskell Curry").
+  
+  bob.setFullName("Haskell Curry")
+  bob.getFirstName() //should return "Haskell" after bob.setFullName("Haskell Curry").
+  
+  bob.setFullName("Haskell Curry")
+  bob.getLastName() //should return "Curry" after bob.setFullName("Haskell Curry").
