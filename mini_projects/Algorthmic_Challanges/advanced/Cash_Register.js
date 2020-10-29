@@ -46,24 +46,25 @@ function checkCashRegister(price, cash, cid) {
   
     function reverse(arr) {
             let newArr= [];
-            for(val of cid) {
+            for(let val of arr) {
             newArr.unshift(val);
             }
             return newArr; 
     }
 
-    let denominator = [100, 20, 10, 5, 1, 0.25, 0.1, 0.05, 0.01];
-
-    let owedChange = (cash - price).toFixed(2);
+    const denominator = [100, 20, 10, 5, 1, 0.25, 0.1, 0.05, 0.01];
     let orderedCid = reverse(cid);
-    let i=0;
-    let output = [];
+    let owedChange = (cash - price).toFixed(2);
+
+    
+    
     let totalCID = 0;
-    //console.log('orderedCid:', orderedCid, '\n');
-    //console.log('owedChange:', owedChange, '\n');
+
     for( let x of orderedCid){
       totalCID += x[1];
     }
+
+
 
     if (totalCID < owedChange) {
       return {status: "INSUFFICIENT_FUNDS", change: []};
@@ -73,37 +74,31 @@ function checkCashRegister(price, cash, cid) {
       return {status: "CLOSED", change: [...cid]};
     }
 
+    let i=0;
+    let output = [];
+
+
 
     for(let val of orderedCid){
       let coinCounter=0;
-      //if (denominator[i] <= owedChange) {
-      //console.log('owedChange:', owedChange, '');
-      //console.log('val:', val[1], '');
-      //console.log('denominator:', denominator[i], '\n');
 
-        while ((val[1]>0) && (owedChange>=denominator[i])){
-          //console.log('in while owedChange:', owedChange, '');
-          val[1]= val[1] - denominator[i];
-          owedChange= (owedChange - denominator[i]).toFixed(2);
-          coinCounter++; 
-        }
+      while ((val[1]>0) && (owedChange>=denominator[i])){
+        val[1]= val[1] - denominator[i];
+        owedChange= (owedChange - denominator[i]).toFixed(2);
+        coinCounter++; 
+      }
 
-      //}
-      
       if (coinCounter>0) { 
         output.push([val[0], Number((denominator[i] * coinCounter).toFixed(2))]);
       }
-    i++;  
+
+    i++;
+
     }
     
     if (owedChange>0) {
       return {status: "INSUFFICIENT_FUNDS", change: []};
     } else return {status: "OPEN", change: [...output]};
-  /*  
-  return {status: "INSUFFICIENT_FUNDS", change: []}
-  return {status: "CLOSED", change: [...]}
-  return {status: "OPEN", change: [...]}
-  */
 }
 
 
